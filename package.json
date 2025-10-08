@@ -1,0 +1,22 @@
+{
+  "name": "aframeclassproject",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A-Frame VR/AR Web Experience using Vite",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "serve": "vite preview --host --port 8080"
+  },
+  "devDependencies": {
+    "vite": "^7.1.7"
+  },
+  "dependencies": {
+    "aframe": "^1.7.0"
+  },
+  "keywords": ["aframe", "webvr", "webxr", "vite", "javascript"],
+  "author": "",
+  "license": "MIT"
+}

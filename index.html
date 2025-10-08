@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>A-Frame Class Project</title>
+    <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <!-- Basic scene with sky, ground, and some objects -->
+      <a-sky color="#87CEEB"></a-sky>
+      
+      <!-- Ground plane -->
+      <a-plane 
+        position="0 0 -4" 
+        rotation="-90 0 0" 
+        width="100" 
+        height="100" 
+        color="#7BC8A4">
+      </a-plane>
+      
+      <!-- A rotating cube -->
+      <a-box 
+        position="-1 0.5 -3" 
+        rotation="0 45 0" 
+        color="#4CC3D9"
+        animation__rotate="property: rotation; to: 0 405 0; loop: true; dur: 10000">
+      </a-box>
+      
+      <!-- A sphere -->
+      <a-sphere 
+        position="0 1.25 -5" 
+        radius="1.25" 
+        color="#EF2D5E">
+      </a-sphere>
+      
+      <!-- A cylinder -->
+      <a-cylinder 
+        position="1 0.75 -3" 
+        radius="0.5" 
+        height="1.5" 
+        color="#FFC65D">
+      </a-cylinder>
+      
+      <!-- Lighting -->
+      <a-light type="ambient" color="#404040"></a-light>
+      <a-light type="directional" position="2 4 2" color="#fff"></a-light>
+      
+      <!-- Camera -->
+      <a-camera>
+        <a-cursor></a-cursor>
+      </a-camera>
+    </a-scene>
+  </body>
+</html>
