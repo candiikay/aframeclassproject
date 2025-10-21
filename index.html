@@ -4,229 +4,211 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Virtual Museum - A-Frame Experience</title>
+    <title>NASA Space Museum - Real 3D Models</title>
     <script src="https://aframe.io/releases/1.7.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-super-hands-component@6.0.0/dist/aframe-super-hands-component.min.js"></script>
   </head>
   <body>
     <a-scene physics="driver: ammo; debug: false">
-      <!-- Professional museum environment -->
-      <a-sky color="#f8f8f8"></a-sky>
+      <!-- Museum environment -->
+      <a-sky color="#f0f0f0"></a-sky>
       
-      <!-- Museum floor with marble texture -->
+      <!-- Museum floor - much larger -->
       <a-plane 
-        position="0 0 -4" 
+        position="0 0 -20" 
         rotation="-90 0 0" 
-        width="100" 
-        height="100" 
+        width="200" 
+        height="200" 
         color="#f5f5f5"
-        material="src: #marbleTexture; repeat: 20 20"
+        material="src: #marbleTexture; repeat: 50 50"
         static-body>
       </a-plane>
       
-      <!-- Museum walls with elegant texture -->
-      <a-plane position="0 2 -10" width="20" height="4" color="#ffffff" material="src: #wallTexture; repeat: 4 2"></a-plane>
-      <a-plane position="-10 2 -4" rotation="0 90 0" width="20" height="4" color="#ffffff" material="src: #wallTexture; repeat: 4 2"></a-plane>
-      <a-plane position="10 2 -4" rotation="0 -90 0" width="20" height="4" color="#ffffff" material="src: #wallTexture; repeat: 4 2"></a-plane>
+      <!-- Museum walls - creating a large hall -->
+      <a-plane position="0 3 -50" width="100" height="6" color="#ffffff" material="src: #wallTexture; repeat: 10 3"></a-plane>
+      <a-plane position="-50 3 -20" rotation="0 90 0" width="100" height="6" color="#ffffff" material="src: #wallTexture; repeat: 10 3"></a-plane>
+      <a-plane position="50 3 -20" rotation="0 -90 0" width="100" height="6" color="#ffffff" material="src: #wallTexture; repeat: 10 3"></a-plane>
       
       <!-- Museum ceiling -->
-      <a-plane position="0 4 -4" rotation="90 0 0" width="20" height="20" color="#f0f0f0"></a-plane>
+      <a-plane position="0 6 -20" rotation="90 0 0" width="100" height="100" color="#f8f8f8"></a-plane>
       
-      <!-- Elegant museum pillars -->
-      <a-cylinder 
-        position="-8 2 -6" 
-        radius="0.6" 
-        height="4" 
-        color="#e8e8e8"
-        material="metalness: 0.1; roughness: 0.2">
-        <a-cylinder 
-          position="0 2.1 0" 
-          radius="0.7" 
-          height="0.2" 
-          color="#d4d4d4"
-          material="metalness: 0.3; roughness: 0.1">
-        </a-cylinder>
-      </a-cylinder>
-      <a-cylinder 
-        position="8 2 -6" 
-        radius="0.6" 
-        height="4" 
-        color="#e8e8e8"
-        material="metalness: 0.1; roughness: 0.2">
-        <a-cylinder 
-          position="0 2.1 0" 
-          radius="0.7" 
-          height="0.2" 
-          color="#d4d4d4"
-          material="metalness: 0.3; roughness: 0.1">
-        </a-cylinder>
-      </a-cylinder>
+      <!-- Museum pillars - creating columns throughout -->
+      <a-cylinder position="-30 3 -30" radius="1" height="6" color="#e8e8e8" material="metalness: 0.1; roughness: 0.2"></a-cylinder>
+      <a-cylinder position="-10 3 -30" radius="1" height="6" color="#e8e8e8" material="metalness: 0.1; roughness: 0.2"></a-cylinder>
+      <a-cylinder position="10 3 -30" radius="1" height="6" color="#e8e8e8" material="metalness: 0.1; roughness: 0.2"></a-cylinder>
+      <a-cylinder position="30 3 -30" radius="1" height="6" color="#e8e8e8" material="metalness: 0.1; roughness: 0.2"></a-cylinder>
       
-      <!-- Working 3D Models from reliable sources -->
+      <a-cylinder position="-30 3 -10" radius="1" height="6" color="#e8e8e8" material="metalness: 0.1; roughness: 0.2"></a-cylinder>
+      <a-cylinder position="-10 3 -10" radius="1" height="6" color="#e8e8e8" material="metalness: 0.1; roughness: 0.2"></a-cylinder>
+      <a-cylinder position="10 3 -10" radius="1" height="6" color="#e8e8e8" material="metalness: 0.1; roughness: 0.2"></a-cylinder>
+      <a-cylinder position="30 3 -10" radius="1" height="6" color="#e8e8e8" material="metalness: 0.1; roughness: 0.2"></a-cylinder>
       
-      <!-- Ancient Greek Statue Display -->
+      <!-- REAL NASA 3D MODELS ONLY - Properly spaced and sized -->
+      
+      <!-- Apollo Lunar Module Display - Left side -->
       <a-box 
-        position="-4 0 -6" 
-        width="2.5" 
-        height="0.3" 
-        depth="2.5" 
+        position="-25 0 -25" 
+        width="4" 
+        height="0.4" 
+        depth="4" 
         color="#8B4513"
         material="src: #marbleTexture; repeat: 2 2">
         <a-entity 
-          gltf-model="#greekStatue"
+          gltf-model="#apolloLunarModule"
           position="0 1.5 0"
-          scale="2 2 2"
+          scale="0.3 0.3 0.3"
           animation="property: rotation; to: 0 360 0; loop: true; dur: 30000">
         </a-entity>
         <a-text 
-          value="Greek Statue" 
+          value="Apollo Lunar Module\n\nUsed in Apollo 11-17 missions\nLanded humans on the Moon" 
           position="0 3.5 0" 
           align="center"
           color="#333"
-          width="5"
-          font="kelsonsans">
+          width="6">
         </a-text>
       </a-box>
       
-      <!-- Egyptian Sphinx Display -->
+      <!-- Apollo Soyuz Display - Center left -->
       <a-box 
-        position="0 0 -6" 
-        width="2.5" 
-        height="0.3" 
-        depth="2.5" 
+        position="-15 0 -25" 
+        width="4" 
+        height="0.4" 
+        depth="4" 
         color="#8B4513"
         material="src: #marbleTexture; repeat: 2 2">
         <a-entity 
-          gltf-model="#egyptianSphinx"
-          position="0 1.2 0"
-          scale="1.5 1.5 1.5">
+          gltf-model="#apolloSoyuz"
+          position="0 1.8 0"
+          scale="0.2 0.2 0.2">
         </a-entity>
         <a-text 
-          value="Egyptian Sphinx" 
-          position="0 3 0" 
+          value="Apollo-Soyuz Test Project\n\nFirst international\nspace mission (1975)" 
+          position="0 3.5 0" 
           align="center"
           color="#333"
-          width="5"
-          font="kelsonsans">
+          width="6">
         </a-text>
       </a-box>
       
-      <!-- Ancient Vase Display -->
+      <!-- ATLAST Telescope Display - Center right -->
       <a-box 
-        position="4 0 -6" 
-        width="2.5" 
-        height="0.3" 
-        depth="2.5" 
+        position="15 0 -25" 
+        width="4" 
+        height="0.4" 
+        depth="4" 
         color="#8B4513"
         material="src: #marbleTexture; repeat: 2 2">
         <a-entity 
-          gltf-model="#ancientVase"
-          position="0 1.2 0"
-          scale="2 2 2">
+          gltf-model="#atlastTelescope"
+          position="0 2.0 0"
+          scale="0.15 0.15 0.15">
         </a-entity>
         <a-text 
-          value="Ancient Vase" 
-          position="0 3 0" 
+          value="ATLAST Space Telescope\n\nAdvanced Technology\nLarge-Aperture Space Telescope" 
+          position="0 3.5 0" 
           align="center"
           color="#333"
-          width="5"
-          font="kelsonsans">
+          width="6">
         </a-text>
       </a-box>
       
-      <!-- Additional museum artifacts with working models -->
+      <!-- Deep Space 1 Display - Right side -->
       <a-box 
-        position="-2 0 -8" 
-        width="2" 
-        height="0.3" 
-        depth="2" 
+        position="25 0 -25" 
+        width="4" 
+        height="0.4" 
+        depth="4" 
         color="#8B4513"
         material="src: #marbleTexture; repeat: 2 2">
         <a-entity 
-          gltf-model="#goldenOrb"
-          position="0 1 0"
-          scale="1.5 1.5 1.5"
-          animation="property: rotation; to: 0 360 0; loop: true; dur: 8000">
+          gltf-model="#deepSpace1"
+          position="0 2.0 0"
+          scale="0.25 0.25 0.25"
+          animation="property: rotation; to: 0 360 0; loop: true; dur: 25000">
         </a-entity>
         <a-text 
-          value="Golden Orb" 
-          position="0 2.5 0" 
+          value="Deep Space 1\n\nNASA's first mission\nto test ion propulsion" 
+          position="0 3.5 0" 
           align="center"
           color="#333"
-          width="4"
-          font="kelsonsans">
+          width="6">
         </a-text>
       </a-box>
       
-      <a-box 
-        position="2 0 -8" 
-        width="2" 
-        height="0.3" 
-        depth="2" 
-        color="#8B4513"
-        material="src: #marbleTexture; repeat: 2 2">
-        <a-entity 
-          gltf-model="#ancientObelisk"
-          position="0 1.2 0"
-          scale="1.8 1.8 1.8">
-        </a-entity>
+      <!-- Museum entrance and information -->
+      <a-plane 
+        position="0 3 -45" 
+        width="8" 
+        height="4" 
+        color="#ffffff"
+        material="opacity: 0.95; src: #panelTexture">
         <a-text 
-          value="Ancient Obelisk" 
-          position="0 2.5 0" 
+          value="Welcome to the\nNASA Space Museum\n\nReal 3D Models from NASA\nWalk through and explore" 
+          position="0 0 0.01" 
           align="center"
           color="#333"
-          width="4"
-          font="kelsonsans">
+          width="12">
         </a-text>
-      </a-box>
+      </a-plane>
       
       <!-- Museum information panels -->
       <a-plane 
-        position="-4 2.5 -5" 
-        width="2" 
-        height="1.2" 
+        position="-25 3 -20" 
+        width="6" 
+        height="3" 
         color="#ffffff"
         material="opacity: 0.95; src: #panelTexture">
         <a-text 
-          value="Historical Artifacts\nfrom Ancient\nCivilizations\n\nClick to interact" 
+          value="Apollo Program\n\nExplore the spacecraft\nthat took humans to the Moon" 
           position="0 0 0.01" 
           align="center"
           color="#333"
-          width="8"
-          font="kelsonsans">
+          width="10">
         </a-text>
       </a-plane>
       
       <a-plane 
-        position="0 2.5 -5" 
-        width="2" 
-        height="1.2" 
+        position="25 3 -20" 
+        width="6" 
+        height="3" 
         color="#ffffff"
         material="opacity: 0.95; src: #panelTexture">
         <a-text 
-          value="Interactive Museum\nExperience\n\nGrab and explore\nthe artifacts" 
+          value="Space Technology\n\nAdvanced telescopes\nand deep space probes" 
           position="0 0 0.01" 
           align="center"
           color="#333"
-          width="8"
-          font="kelsonsans">
+          width="10">
         </a-text>
       </a-plane>
       
-      <!-- Professional museum lighting -->
-      <a-light type="ambient" color="#404040" intensity="0.3"></a-light>
-      <a-light type="directional" position="2 4 2" color="#fff" intensity="0.6"></a-light>
-      <a-light type="spot" position="0 3 -6" target="#spotlight-target" angle="45" penumbra="0.2" color="#fff" intensity="0.4"></a-light>
-      <a-light type="point" position="-4 2 -6" color="#fff" intensity="0.3" distance="10"></a-light>
-      <a-light type="point" position="4 2 -6" color="#fff" intensity="0.3" distance="10"></a-light>
+      <!-- Enhanced museum lighting for better visibility -->
+      <a-light type="ambient" color="#606060" intensity="0.6"></a-light>
+      <a-light type="directional" position="5 8 5" color="#fff" intensity="1.2"></a-light>
+      <a-light type="spot" position="0 6 -25" target="#spotlight-target" angle="80" penumbra="0.2" color="#fff" intensity="0.8"></a-light>
+      
+      <!-- Individual spotlights for each NASA exhibit -->
+      <a-light type="spot" position="-25 5 -25" target="#apollo-lunar-target" angle="45" penumbra="0.1" color="#fff" intensity="0.6"></a-light>
+      <a-light type="spot" position="-15 5 -25" target="#apollo-soyuz-target" angle="45" penumbra="0.1" color="#fff" intensity="0.6"></a-light>
+      <a-light type="spot" position="15 5 -25" target="#telescope-target" angle="45" penumbra="0.1" color="#fff" intensity="0.6"></a-light>
+      <a-light type="spot" position="25 5 -25" target="#satellite-target" angle="45" penumbra="0.1" color="#fff" intensity="0.6"></a-light>
+      
+      <!-- Additional point lights for better coverage -->
+      <a-light type="point" position="-25 4 -25" color="#fff" intensity="0.6" distance="20"></a-light>
+      <a-light type="point" position="-15 4 -25" color="#fff" intensity="0.6" distance="20"></a-light>
+      <a-light type="point" position="15 4 -25" color="#fff" intensity="0.6" distance="20"></a-light>
+      <a-light type="point" position="25 4 -25" color="#fff" intensity="0.6" distance="20"></a-light>
+      
+      <!-- General museum lighting -->
+      <a-light type="point" position="0 4 -15" color="#fff" intensity="0.4" distance="30"></a-light>
       
       <!-- Hand tracking for VR -->
       <a-entity id="leftHand" hand-controls="left" super-hands></a-entity>
       <a-entity id="rightHand" hand-controls="right" super-hands></a-entity>
       
-      <!-- Camera with cursor for desktop -->
-      <a-camera position="0 1.6 0">
+      <!-- Camera positioned to face the NASA models directly -->
+      <a-camera position="0 1.6 -5" rotation="0 0 0" wasd-controls="enabled: true">
         <a-cursor 
           raycaster="objects: [grabbable]"
           cursor="fuse: false; rayOrigin: mouse"
@@ -235,19 +217,45 @@
       </a-camera>
     </a-scene>
     
-    <!-- Asset loading section - GUARANTEED WORKING MODELS -->
+    <!-- Asset loading section -->
     <a-assets>
-      <!-- Working 3D models from reliable A-Frame CDN -->
-      <a-asset-item id="greekStatue" src="https://cdn.aframe.io/test-models/models/brainstem/BrainStem.gltf"></a-asset-item>
-      <a-asset-item id="egyptianSphinx" src="https://cdn.aframe.io/test-models/models/brainstem/BrainStem.gltf"></a-asset-item>
-      <a-asset-item id="ancientVase" src="https://cdn.aframe.io/test-models/models/brainstem/BrainStem.gltf"></a-asset-item>
-      <a-asset-item id="goldenOrb" src="https://cdn.aframe.io/test-models/models/brainstem/BrainStem.gltf"></a-asset-item>
-      <a-asset-item id="ancientObelisk" src="https://cdn.aframe.io/test-models/models/brainstem/BrainStem.gltf"></a-asset-item>
+      <!-- Real NASA 3D Models ONLY -->
+      <a-asset-item id="apolloLunarModule" src="/nasa-models/apollo-lunar-module.glb"></a-asset-item>
+      <a-asset-item id="apolloSoyuz" src="/nasa-models/apollo-soyuz.glb"></a-asset-item>
+      <a-asset-item id="atlastTelescope" src="/nasa-models/atlast-telescope.glb"></a-asset-item>
+      <a-asset-item id="deepSpace1" src="/nasa-models/deep-space-1.glb"></a-asset-item>
       
       <!-- Museum textures -->
       <img id="marbleTexture" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-forest.jpg">
       <img id="wallTexture" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-city.jpg">
       <img id="panelTexture" src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/thumb-sechelt.jpg">
     </a-assets>
+    
+    <!-- Debug script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        console.log('🏛️ NASA Space Museum loaded - Overview from outside!');
+        
+        const scene = document.querySelector('a-scene');
+        scene.addEventListener('loaded', function() {
+          console.log('✅ Museum scene loaded successfully');
+          
+          // Check each NASA model
+          const models = ['apolloLunarModule', 'apolloSoyuz', 'atlastTelescope', 'deepSpace1'];
+          models.forEach(modelId => {
+            const model = document.querySelector(`[gltf-model="#${modelId}"]`);
+            if (model) {
+              console.log(`🔍 NASA Model ${modelId} element found:`, model);
+              model.addEventListener('model-loaded', function() {
+                console.log(`✅ NASA Model ${modelId} loaded successfully!`);
+              });
+              model.addEventListener('model-error', function(e) {
+                console.error(`❌ NASA Model ${modelId} failed to load:`, e.detail);
+              });
+            }
+          });
+        });
+      });
+    </script>
   </body>
 </html>
